@@ -1,10 +1,12 @@
-from flask import Flask
+import pathlib
 
-app = Flask(__name__)
+import pydicom
 
-@app.route('/')
-def hello():
-    return 'Hello, World!'
+import streamlit as st
 
-if __name__ == '__main__':
-    app.run()
+
+st.title("Hello World!")
+
+st.write(pathlib.Path.home())
+
+st.write(pydicom)
